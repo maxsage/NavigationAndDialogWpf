@@ -1,0 +1,99 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="MessageWindowBackgroundBrush"
+                     Color="#FFE6E4EC" />
+
+    <SolidColorBrush x:Key="MessageWindowForegroundBrush"
+                     Color="#FF3F3F3F" />
+    
+    <SolidColorBrush x:Key="MessageWindowForegroundBrushError"
+                     Color="#FF0013FF" />
+
+    <SolidColorBrush x:Key="MessageWindowTitleBrush"
+                     Color="White" />
+
+    <SolidColorBrush x:Key="MessageWindowBorderBrush"
+                     Color="#FF28334D" />
+
+    <Style x:Key="MessageWindowHostStyle"
+           TargetType="{x:Type Grid}">
+        <Setter Property="Background"
+                Value="#00000000" />
+    </Style>
+
+    <Style x:Key="MessageWindowStyle"
+           TargetType="{x:Type Border}">
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="MinHeight"
+                Value="300" />
+        <Setter Property="MaxHeight"
+                Value="500" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Width"
+                Value="600" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource MessageWindowBorderBrush}" />
+        <Setter Property="Background"
+                Value="{DynamicResource MessageWindowBorderBrush}" />
+        <Setter Property="BorderThickness"
+                Value="4" />
+    </Style>
+    
+    <Style x:Key="MessageWindowTitleStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin"
+                Value="20,8,0,10" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource MessageWindowTitleBrush}" />
+    </Style>
+
+    <Style x:Key="MessageWindowTitleBarStyle"
+           TargetType="{x:Type Rectangle}">
+        <Setter Property="Fill"
+                Value="{DynamicResource MessageWindowBackgroundBrush}" />
+    </Style>
+    
+    <Style x:Key="MessageWindowTextStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin"
+                Value="20" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="TextWrapping"
+                Value="Wrap" />
+        <Setter Property="TextTrimming"
+                Value="WordEllipsis" />
+    </Style>
+
+    <Style x:Key="MessageWindowsButtonsPanelStyle"
+           TargetType="{x:Type StackPanel}">
+        <Setter Property="HorizontalAlignment"
+                Value="Right" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="Orientation"
+                Value="Horizontal" />
+    </Style>
+
+    <Style x:Key="MessageWindowButtonStyle"
+           BasedOn="{StaticResource ButtonStyle}"
+           TargetType="{x:Type Button}">
+        <Setter Property="Width"
+                Value="150" />
+        <Setter Property="Margin"
+                Value="0,0,20,20" />
+    </Style>
+</ResourceDictionary>
